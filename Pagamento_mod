@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+string lerFuncionario() {
+    string nome;
+    getline(cin, nome);
+    return nome;
+}
+
+double calcularPagamento(double vh, double h) {
+    return vh * h;
+}
+
+void exibirPagamento(string nome, double total) {
+    cout << "O pagamento para " << nome << " deve ser " << total << endl;
+}
+
+int main() {
+    string nome;
+    double vh, h;
+
+    nome = lerFuncionario();
+    cin >> vh >> h;
+
+    double total = calcularPagamento(vh, h);
+
+    exibirPagamento(nome, total);
+}
